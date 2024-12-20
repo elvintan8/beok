@@ -23,16 +23,7 @@ app.get('/', (req, res) => {
   });
 });
 
-// Error handling for unhandled routes
-app.use((req, res, next) => {
-  res.status(404).send({ message: 'Not Found' });
-});
 
-// Error handling for server issues
-app.use((err, req, res, next) => {
-  console.error(err.stack);
-  res.status(500).send({ message: 'Something went wrong!', error: err.message });
-});
 
 app.listen(PORT, () => {
   console.log(`Server is running on http://localhost:${PORT}`);
