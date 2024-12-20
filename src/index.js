@@ -1,8 +1,8 @@
 const express = require("express");
 const cors = require("cors");
 
-const userRoutes  = require("./api/routes/userroutes");
-const anggotaRoutes = require("./api/routes/anggotaroutes");
+const userRoutes  = require("../api/routes/userroutes");
+const anggotaRoutes = require("../api/routes/anggotaroutes");
 
 const app = express();
 const PORT = 3001;
